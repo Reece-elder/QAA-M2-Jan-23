@@ -52,3 +52,4 @@ print(cities[24:34])
 city_list = cities.split(",")
 print(city_list)
 print(city_list)
+
