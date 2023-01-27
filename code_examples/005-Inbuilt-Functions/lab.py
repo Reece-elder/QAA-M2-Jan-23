@@ -10,3 +10,13 @@ for num in new_data:
 
 print(max(int_data))
 print(min(int_data))
+
+colour = "red"
+shape = "star"
+number = 123
+
+print_string = f"I have {number} {colour} {shape}s"
+print(print_string)
+
+new_string = "I have {} {} {}s".format(number, colour, shape)
+print(new_string)
