@@ -36,6 +36,7 @@ def sumOfCars(car_type):
 
 ford_nums = cleanArray(ford)
 volks_nums = cleanArray(volks)
+print(ford_nums[4] + volks_nums[4])
 
 print(sumOfCars(ford_nums))
 
