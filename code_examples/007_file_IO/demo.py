@@ -57,3 +57,7 @@ file = open("appendFile.txt", "a")
 file.write(f"This will be appended! random number: {random.randint(1, 30)}\n")
 
 file.close()
+
+# Exercise - Create a function that asks the user to input the following :
+# name, movie_seeing, number_seats, VIP seats (save as a string)
+# Create a bookings.txt file and push the data to the file persisting the data
