@@ -5,8 +5,8 @@ def makeBooking():
     movie = input("Please enter movie name: ")
     seats = int(input("Please enter number of seats: "))
     vip = input("VIP seats? true or false: ")
-    booking = f"Name: {name}  movie: {movie}  seats: {seats}  vip: {vip}\n"
-    return booking
+    booking_str = f"Name: {name}  movie: {movie}  seats: {seats}  vip: {vip}\n"
+    return booking_str
 
 booking = True
 
