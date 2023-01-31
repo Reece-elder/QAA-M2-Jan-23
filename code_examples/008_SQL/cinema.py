@@ -64,12 +64,42 @@ def updateMovieTitleId(id, title):
     Some form of while loop to keep the user from adding and reading data til they want to end 
 """
 
-print("Welcome to Cinema / zoo, what would you like to do?; ")
-print("1. Add a movie")
+# print("Welcome to Cinema / zoo, what would you like to do?; ")
+# print("1. Add a movie")
 
-print(readAllMovies())
-print(readAllTickets())
-deleteTicketId(2)
-print(readAllTickets())
+# print(readAllMovies())
+# print(readAllTickets())
+# deleteTicketId(2)
+# print(readAllTickets())
 
-    
+def runApp():
+
+    print("""
+    Welcome to QA Cinema! 
+    Please select an option from below: 
+    1. Add a Movie
+    2. Book a ticket
+    3. Read All movies
+    4. ????
+    """
+    )
+    running = True
+
+    # Does a thing while a condition is true
+    while running:
+        choice = int(input("Please select a choice using a number: "))
+        if choice == 1:
+            insertMovie()
+        elif choice == 2:
+            insertTicket()
+        else: 
+            print("Incorrect choice.. try again..")
+
+        # To ask if they want to carry on using
+        end_choice = input("Do you want to query more data Y / N: ")
+        if end_choice.upper() == "N":
+            running = False
+
+runApp()
+
+conn.commit()
