@@ -49,6 +49,11 @@ def readAllMoviesGenre(genre):
 def readAllQuery(query):
     return cursor.execute(query).fetchall()
 
+def readMovieId():
+    film_id = input("Please choose ID: ")
+    query = f"SELECT * FROM movies WHERE film_id = {film_id}"
+    return readAllQuery(query)
+
 # insertMovie()
 # insertTicket(1)
 # insertTicket(2)
@@ -58,7 +63,8 @@ def readAllQuery(query):
 # print(readAllData("movies"))
 # print(readAllQuery("SELECT * FROM tickets WHERE number_tickets < 4"))
 # insertMovie()
-print(insertTicket(500))
+# print(insertTicket(500))
+print(readMovieId())
 
 # Exercise - Implement a function that gets an animal by animal id (pass in id)
 # Create a function that gets all records from one condition the user can set (pass in field and value)
