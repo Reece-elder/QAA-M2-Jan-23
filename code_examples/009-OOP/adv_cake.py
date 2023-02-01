@@ -16,6 +16,10 @@ class cake:
     def __str__(self):
         return f"flavour: {self.flavour}  layers: {self.layers}  ingredients: {self.ingredients}"
 
+    def changeFlavour(self, newFlav):
+        self.flavour = newFlav
+        return True
+
 
 cake1 = cake(2, "vanilla", False, ["flour", "eggs", "milk"])
 cake2 = cake(4, "choc", True, ["cocoa", "oil", "gluten free flour"])
@@ -32,5 +36,21 @@ print(cake1.layers)
 print(cake2.__str__())
 print(cake2)
 
-# Exercise - In your class override the __str__ method to return key: value pairs for attributes
-# Add a custom function that returns some text and includes an attribute
+cake1.changeFlavour("coffee") # using function to change to coffee
+cake1.flavour = "raspberry"   # directly changing value
+print(cake1)
+
+# getattr - returns the value of named attribute of object
+# setattr - changes the value of named attribute
+# delattr - deletes this attribute
+# hasattr - checks if attribute is there and returns true or false 
+print("*****************************************")
+setattr(cake1, "candles", 9) 
+delattr(cake1, "candles")
+print(hasattr(cake1, "candles")) # returns false
+if hasattr(cake1, "candles"):
+    print(getattr(cake1, "candles")) # cake has no attr called candles
+else: 
+    print("Cake 1 has no candles :(")
+
+
