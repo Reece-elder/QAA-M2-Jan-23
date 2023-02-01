@@ -2,13 +2,13 @@ from service import service
 
 class controller:
     service1 = service()
-    # service2 = service("test")
+    
     def startApp(self):
         print("App Starting!")
         choice = input("What do you want to do..: ")
         print(choice)
         print(self.service1.addToDB())
-        print(self.service2)
+        # print(self.service2)
 
 controller1 = controller()
 
