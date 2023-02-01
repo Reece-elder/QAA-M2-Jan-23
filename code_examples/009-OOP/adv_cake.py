@@ -45,7 +45,8 @@ print(cake1)
 # delattr - deletes this attribute
 # hasattr - checks if attribute is there and returns true or false 
 print("*****************************************")
-setattr(cake1, "candles", 9) 
+setattr(cake1, "flavour", "almond") # updates AND creates new attributes
+print(cake1.flavour) 
 delattr(cake1, "candles")
 print(hasattr(cake1, "candles")) # returns false
 if hasattr(cake1, "candles"):
