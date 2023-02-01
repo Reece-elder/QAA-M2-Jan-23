@@ -3,6 +3,7 @@
 
 from repo import selectQuery
 
+
 def readAllMovies():
     query = "SELECT * FROM movies"
     return selectQuery(query)

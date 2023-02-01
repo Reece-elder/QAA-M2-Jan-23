@@ -19,6 +19,8 @@ class cake:
 # Outside of the class cake we can make a cake object
 # Variable cake1 is equal to whatever our cake class returns
 cake1 = cake(2, "vanilla", False, ["flour", "eggs", "milk"])
+cake2 = cake(4, "choc", True, ["cocoa", "oil", "gluten free flour"])
+cake3 = cake(1, "plain", False, ["flour", "eggs"])
 
 # Guess 1 - Display the attributes as an list
 # Guess 2 - Display attributes as a dictionary (objFlavour: vanilla)
@@ -33,3 +35,12 @@ print(cake1.__dir__()) # All attributes / functions of objects
 # Exercise - Create a class for an 'object' of your choice
 # Class must contain atleast 4 variables using string, boolean, numbers (ints / floats) and an array
 # Create 2x objects of your class and print the attributes you have set
+
+def printIngredients(cake):
+    print(cake.flavour)
+    print(cake.ingredients)
+
+cakeList = [cake1, cake2, cake3]
+
+for cake in cakeList:
+    printIngredients(cake)
