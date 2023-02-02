@@ -48,3 +48,7 @@ class demo_test(TestCase):
 
         # Assert
         self.assertEquals(result, 2)
+
+    def test_countingApplesTwo(self):
+
+        self.assertEquals(countingApples(["apple", "kiwi"]), 1)
