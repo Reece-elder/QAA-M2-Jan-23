@@ -1,0 +1,2 @@
+def returnRed():
+    return "Red"
