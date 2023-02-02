@@ -8,35 +8,55 @@
     2) Printing object which prints what calculator returns 
 """
 
-def add_sum(x, y):
-    return x + y
+class calculator:
 
-def sub_sum(x, y):
-    return x - y
+    def __init__(self, brand):
+        self.brand = brand
 
-def mul_sum(x, y):
-    return x * y
+    def add_sum(self, x, y):
+        return x + y
 
-def div_sum(x, y):
-    return x / y
+    def sub_sum(self, x, y):
+        return x - y
 
-def power_sum(x, y):
-    return x**y
+    def mul_sum(self, x, y):
+        return x * y
 
-def getChoice():
-    choice = int(input("Please select choice between 1 - 5: "))
+    def div_sum(self, x, y):
+        return x / y
 
-    num1 = int(input("Please choose num1 :"))
-    num2 = int(input("Please choose num2 :"))
-    if choice == 1:
-        print(add_sum(num1, num2))
-    elif choice == 2:
-        print(sub_sum(num1, num2))
-    elif choice == 3:
-        print(mul_sum(num1, num2))
-    elif choice == 4:
-        print(div_sum(num1, num2))
-    elif choice == 5:
-        print(power_sum(num1, num2))
-    else:
-        print("Incorrect choice")
+    def power_sum(self, x, y):
+        return x**y
+
+class calc_controller:
+
+    # What calculator object do I want to belong to this
+    def __init__(self, calculator):
+        self.calc = calculator
+
+    def getBrand(self):
+        return self.calc.brand
+
+    def getChoice(self):
+        choice = int(input("Please select choice between 1 - 5: "))
+
+        num1 = int(input("Please choose num1 :"))
+        num2 = int(input("Please choose num2 :"))
+        if choice == 1:
+            print(self.calc.add_sum(num1, num2))
+        elif choice == 2:
+            print(self.calc.sub_sum(num1, num2))
+        elif choice == 3:
+            print(self.calc.mul_sum(num1, num2))
+        elif choice == 4:
+            print(self.calc.div_sum(num1, num2))
+        elif choice == 5:
+            print(self.calc.power_sum(num1, num2))
+        else:
+            print("Incorrect choice")
+
+calc1 = calculator("Casio")
+cont1 = calc_controller(calc1)
+
+cont1.getChoice()
+print(cont1.getBrand())
