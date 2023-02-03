@@ -4,3 +4,6 @@ class repo:
     def addedDB(self):
         return "It has been added to DB!"
 
+    def runQuery(self, query):
+        return [1, "latte", "grande", False, "John Cena"]
+

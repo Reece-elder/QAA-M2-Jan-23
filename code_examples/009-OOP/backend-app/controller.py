@@ -1,16 +1,16 @@
-from service import service
+from service import Service
 
-class controller:
-    service1 = service()
+class Controller:
+    service1 = Service()
     
     def startApp(self):
-        print("App Starting!")
+        # print("App Starting!")
         choice = input("What do you want to do..: ")
         print(choice)
-        print(self.service1.addToDB())
+        return self.service1.addToDB()
         # print(self.service2)
 
-controller1 = controller()
+controller1 = Controller()
 
-controller1.startApp()
+print(controller1.startApp())
 
